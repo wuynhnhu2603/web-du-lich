@@ -44,15 +44,35 @@
             useEffect(() => {
                 const data = JSON.parse(localStorage.getItem('cart')) || [];
                 if(data.length === 0) {
-                    setCart([{
-                        id: 1,
-                        name: "Đà Lạt 3N2Đ - Thành phố Ngàn Hoa",
-                        price: 2200000,
-                        image: "https://images.unsplash.com/photo-1596395819057-e37f55a8528c?q=80&w=500", 
-                        location: "Lâm Đồng",
-                        duration: "3 ngày 2 đêm",
-                        quantity: 3
-                    }]);
+                    setCart([
+    {
+        id: 1,
+        name: "Đà Lạt 3N2Đ - Thành phố Ngàn Hoa",
+        price: 2200000,
+        image: "../images/dalat.jpg",
+        location: "Lâm Đồng",
+        duration: "3 ngày 2 đêm",
+        quantity: 1
+    },
+    {
+        id: 2,
+        name: "Khám phá Vịnh Hạ Long",
+        price: 3500000,
+        image: "../images/halong.jpg",
+        location: "Quảng Ninh",
+        duration: "2 ngày 1 đêm",
+        quantity: 1
+    },
+    {
+        id: 3,
+        name: "Tour Đảo Ngọc Phú Quốc",
+        price: 4800000,
+        image: "../images/phuquoc.jpg",
+        location: "Kiên Giang",
+        duration: "4 ngày 3 đêm",
+        quantity: 1
+    }
+]);
                 } else {
                     setCart(data);
                 }
@@ -77,7 +97,6 @@
 
             return (
                 <div className="min-h-screen">
-                    {/* Header có LOGO */}
                     <header className="bg-white border-b sticky top-0 z-50">
                         <div className="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
 <div className="flex items-center gap-4 cursor-pointer">
