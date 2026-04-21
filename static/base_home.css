@@ -130,21 +130,21 @@ section {
     text-align: center;
 }
 .home-content-1 h1 {
-    font-size: 52px;
+    font-size: 68px;
 }
 .home-content-1 h2 {
     margin: 60px 0;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
+    font-size: 32px;
 }
 .home-content-1 button{
-    padding: 12px 28px;
+    padding: 20px 28px;
     border-radius: 50px ;
     border: 0px;
-    font-size: 18px;
+    font-size: 32px;
     font-weight: 600;
     color: white;
-    background-color:#27ae60;
+    background-color:#27ae5f7c;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -186,9 +186,8 @@ section {
     align-items: center;
 }
 .s2 h1{
-    font-size: 52px;
-    color:#27ae60;
-    margin-top: 30px;
+    color: #000;
+    font-size: 62px;
 }
 .top-diadiem {
     display: grid;
@@ -196,7 +195,7 @@ section {
     gap: 40px;
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 50px auto;
     color: black;
     justify-content: center;
 }
@@ -210,6 +209,7 @@ section {
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
     padding-bottom: 20px;
 }
 .top:hover {
@@ -224,21 +224,39 @@ section {
 }
 .top h3 {
     margin-top: 15px;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .top h4 {
-    font-weight: normal;
+    font-weight: none;
     margin-top: 5px;
+    font-size: 20px;
 }
 
 @media (max-width: 1000px) {
-    .top-diadiem {
-        grid-template-columns: repeat(2, 1fr);
+    .s2 h1 {
+        font-size: 42px;
+    }
+.top-diadiem {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+        justify-content: center;
+        padding: 0 20px 20px 20px;
+    }
+
+    .top {
+        width: 100%;
+        height: auto; 
+        margin: 0 auto;
+        padding-top: 20px; 
+    }
+    .top img {
+        height: 250px;
     }
 }
 
-@media (max-width: 600px) {
+
+@media (max-width: 800px) {
     .top-diadiem {
         grid-template-columns: 1fr;
     }
@@ -256,6 +274,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
+    gap: 20px;
 }
 .bai-bao-chinh {
     display: flex;
@@ -300,15 +319,45 @@ a {
     color: white;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
     .bai-bao {
-        grid-template-columns: 1fr; /* Chuyển thành 1 cột trên mobile */
+        grid-template-columns: 1fr; 
+        gap: 50px;
     }
+    
+    .bai-bao-chinh img {
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 800px) {
     .s3 {
-        padding: 20px;
+        padding: 40px 20px;
+    }
+
+    .info-main strong {
+        font-size: 22px !important; 
+    }
+
+    .news-s {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .news-s img {
+        width: 100%; 
+        height: 180px;
+    }
+    
+    .news-s .info strong {
+        font-size: 16px !important;
     }
 }
 /* section 4*/
+.danh-gia {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
 
 .comment {
     display: flex;
@@ -320,9 +369,16 @@ a {
     align-items: center;
 
 }
+.s4 h1{
+    color:#000;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 42px;
+    margin-top: 0;
+}
 
 .comment img {
-    height: 300px;
+    height: 200px;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
@@ -330,9 +386,22 @@ a {
 .nhan-xet {
     font-size: 22px;
     text-align: center;
-    padding: 100px 0 ;
+    padding: 60px 0;
+    color: #000;
+    margin-top: 0;
+} 
+
+@media (max-width: 1000px) {
+    .s4 {
+        padding: 0 20px;
+    }
+    .s4 h1{
+        font-size: 32px;
+    }
 
 }
+
+/*footer*/
 
 .footer {
     background-color: black;
@@ -360,6 +429,7 @@ a {
 
 .social-items {
     background-color: white;
+    color: black;
     width: 36px;
     height: 36px;
     border-radius: 50%;
