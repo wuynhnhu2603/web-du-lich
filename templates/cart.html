@@ -80,12 +80,19 @@
                     {/* Header có LOGO */}
                     <header className="bg-white border-b sticky top-0 z-50">
                         <div className="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
-                            <div className="flex items-center gap-2 cursor-pointer">
-                                <div className="w-10 h-10 bg-[#43dfd0] rounded-xl flex items-center justify-center text-white shadow-sm">
-                                    <i className="fa-solid fa-paper-plane"></i>
-                                </div>
-                                <span className="text-2xl logo-text italic">ViVu Việt</span>
-                            </div>
+<div className="flex items-center gap-4 cursor-pointer">
+
+    <div className="w-14 h-14 bg-[#43dfd0] rounded-2xl flex items-center justify-center text-white shadow-lg transform -rotate-12 hover:rotate-0 transition-transform duration-300">
+        <i className="fa-solid fa-paper-plane text-2xl"></i>
+    </div>
+    
+    <div className="flex flex-col leading-none">
+        <span className="text-5xl logo-nghe-thuat tracking-tighter">
+            <span className="text-[#43dfd0]">ViVu</span> Việt
+        </span>
+        <span className="text-[12px] tracking-[6px] text-gray-300 font-black uppercase ml-1 mt-1">Discovery</span>
+    </div>
+</div>
                             <nav className="hidden md:flex gap-8 text-sm font-semibold text-slate-600">
                                 <a href="home.html" className="hover:text-[#43dfd0]">Trang chủ</a>
                                 <a href="tours.html" className="hover:text-[#43dfd0]">Tour du lịch</a>
