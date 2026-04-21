@@ -70,7 +70,7 @@
                 <div className="max-w-7xl mx-auto px-4 py-10 lg:py-16 min-h-screen">
                     <div className="flex items-center justify-between mb-10 pb-6 border-b border-gray-100">
                         <div className="flex items-center gap-3">
-                           <a href="home.html" className="w-10 h-10 btn-mixi rounded-full flex items-center justify-center text-white hover:scale-110 transition">
+                           <a href="home.html" className="w-10 h-10 btn-vivu rounded-full flex items-center justify-center text-white hover:scale-110 transition">
                                 <i className="fa-solid fa-chevron-left text-sm"></i>
                             </a>
                             <h1 className="text-2xl font-bold text-slate-800">Thông tin đặt chỗ</h1>
@@ -80,11 +80,11 @@
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                         <div className="lg:col-span-8 space-y-6">
                             {cart.length === 0 ? (
-                                <div className="mixi-card p-16 text-center">
+                                <div className="vivu-card p-16 text-center">
                                     <p className="text-gray-400">Giỏ hàng đang trống.</p>
                                 </div>
                             ) : cart.map(item => (
-                                <div key={item.id} className="mixi-card p-6 flex flex-col sm:flex-row gap-6 border border-transparent hover:border-[#43dfd0]/30 transition-all">
+                                <div key={item.id} className="vivu-card p-6 flex flex-col sm:flex-row gap-6 border border-transparent hover:border-[#43dfd0]/30 transition-all">
                                     <img src={item.image} className="w-full sm:w-40 h-32 object-cover rounded-xl shadow-sm" />
                                     <div className="flex-1 flex flex-col justify-between">
                                         <div>
@@ -117,7 +117,7 @@
                         </div>
 
                         <div className="lg:col-span-4 sticky top-10">
-                            <div className="mixi-card p-8">
+                            <div className="vivu-card p-8">
                                 <h2 className="text-xl font-bold text-slate-800 mb-8 border-b pb-5">Tóm tắt chuyến đi</h2>
                                 <div className="space-y-4 mb-8">
                                     <div className="flex justify-between">
@@ -137,7 +137,7 @@
                                         <p className="text-[10px] text-gray-400 uppercase mt-1">Đã bao gồm VAT</p>
                                     </div>
                                 </div>
-                                <button className="w-full btn-mixi text-white py-4.5 rounded-2xl font-bold text-lg shadow-lg">
+                                <button className="w-full btn-vivu text-white py-4.5 rounded-2xl font-bold text-lg shadow-lg">
                                     Tiến hành thanh toán
                                 </button>
                             </div>
