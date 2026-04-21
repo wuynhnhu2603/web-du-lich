@@ -2,9 +2,147 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>ViVu Việt</title>
 </head>
 <body>
+    <header class="navbar">
+        <div class="nav-left">
+            <img class="logo" src="/images/logo.png">
+            <h2>ViVu Việt</h2>
+        </div>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
+        <ul class="nav-center" id="nav-list">
+            <li><a href="/templates/home.html" class="nav-a">Home</a></li>
+            <li><a href="/templates/tours.html" class="nav-a">Tours</a></li>
+            <li><a href="/templates/cart.html" class="nav-a">Cart</a></li>
+            <li><a href="/templates/about.html" class="nav-a">About Us</a></li>
+            <li><a href="#" class="nav-a">Login</a></li>
+        </ul>
+    </header>
+    <script>
+        const menu = document.querySelector('#mobile-menu');
+        const navList = document.querySelector('#nav-list');
+
+        menu.addEventListener('click', function() {
+            navList.classList.toggle('active');
+            menu.classList.toggle('is-active');
+        });
+
+    </script>
+ <main class="container">
+    <section class="a1">
+        <div class="me">
+            <p>Về chúng tui</p>
+            <p>Nhóm 7</p>
+        </div>
+        <div class="main-context">
+            <strong style="font-size: 52px;">ABOUT US</strong>
+            <p>Vivu Việt được ra đời từ niềm đam mê mãnh liệt với vẻ đẹp tiềm ẩn của dải đất hình chữ S. Chúng tôi không chỉ đơn thuần là một trang web cung cấp thông tin du lịch; chúng tôi là người kể chuyện, là người đồng hành giúp bạn tìm thấy những góc nhìn mới lạ ngay tại những địa danh quen thuộc nhất.</p>
+            <p>Khởi nguồn từ một dự án sáng tạo của nhóm sinh viên Kinh tế (NEU), Vivu Việt nhanh chóng chuyển mình thành một nền tảng kết nối những tâm hồn xê dịch. Với sự am hiểu sâu sắc về thói quen du lịch của Gen Z và sức mạnh của công nghệ số, chúng tôi mang đến những lịch trình cá nhân hóa, giúp mỗi chuyến đi của bạn trở thành một bản tuyên ngôn về sự tự do và khám phá.</p>
+        </div>
+    </section>
+    
+    <section class="a2" style="background-image: linear-gradient(rgba(0,0,0,0.3)), url('/images/anh1.jpg');">
+        <div class="trich-dan">
+            <strong>"Du lịch không chỉ là đi từ nơi này đến nơi khác, mà là cách chúng ta cảm nhận hơi thở của cuộc sống qua từng điểm dừng chân."</strong>
+            <p style="text-align: right;">— Đội ngũ sáng lập Vivu Việt</p>
+        </div>
+
+        <div class="introduce">
+            <strong>THE TEAM</strong>
+            <div class="member">
+                <div class="m1">
+                    <img src="/images/ava1.jpg">
+                    <p>Đào Hoàng Gia Bảo</p>
+                </div>
+
+                <div class="m1">
+                    <img src="/images/ava2.jpg">
+                    <p>Nguyễn Thị Quỳnh Như</p>
+                </div>
+
+                <div class="m1">
+                    <img src="/images/ava3.jpg">
+                    <p>Nguyễn Đức Thịnh</p>
+                </div>
+
+                <div class="m1">
+                    <img src="/images/ava4.jpg">
+                    <p>Lưu Minh Vũ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="a4">
+        <div class="p1">
+            <img src="/images/team.jpg">
+        </div>
+        <div class="p2">
+            <div class="text2">
+                <h1>ĐỘI NGŨ</h1>
+                <p>Tại Vivu Việt, mỗi thành viên đều là một "traveler" chính hiệu. Chúng tôi tin rằng để tạo ra những trải nghiệm tốt nhất cho người dùng, chính chúng tôi phải là những người đầu tiên đặt chân đến những vùng đất mới, nếm thử những món ăn địa phương và cảm nhận văn hóa bản địa một cách chân thực nhất.</p>
+                <p>Chúng tôi kết hợp giữa tư duy phân tích dữ liệu kinh tế và sự sáng tạo không giới hạn của những người làm công nghệ. Từ việc tối ưu hóa thuật toán tìm kiếm đến việc biên tập những nội dung chạm đến cảm xúc, đội ngũ Vivu Việt luôn nỗ lực để mỗi cú chạm của bạn trên website đều mở ra một hành trình ý nghĩa.</p>
+            </div>
+        <h2>Những con số không có thật</h2>
+        <div class="solieu">
+            <div class="d">
+                <h1>500+</h1>
+                <p>Người dùng dịch vụ</p>
+            </div>
+            <div class="d">
+                <h1>63-</h1>
+                <p>Tỉnh thành Việt Nam trong danh mục khám phá</p>
+            </div>
+            <div class="d">
+                <h1>24/7</h1>
+                <p>Không tư vấn trực tuyến</p>
+            </div>
+            <div class="d">
+                <h1>100%</h1>
+                <p>Nội dung kiểm chứng và trải nghiệm thực tế đều không có thật</p>
+            </div>
+        </div>
+</div>
+    </section>
+</main>
+<footer>
+        <div class="footer">
+            <div class="footer_1">
+                <img class="logo" src="/images/logo.png">
+                <h3>ViVu Việt</h3> 
+                <div class="social-links">
+                    <a href="#" class="social-items"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-items"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-items"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="social-items"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+
+            <div class="contact">
+                <h3>CONTACT</h3>
+                <p>Địa chỉ: P613, tòa A2, Đại học Kinh tế Quốc dân.</p>
+                <p>Hotline: 0123456789</p>
+                <p>Email: abcd1234@gmail.com</p>
+            </div>
+
+            <div class="footer_3">
+                <p>© Bản quyền thuộc về Nhóm 5</p>
+                <p>Có thắc mắc? Đừng liên hệ!</p>
+            </div>
+    
+        </div>
+    </footer>
 
 </body>
 </html>
