@@ -1,0 +1,53 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lexend:wght@800&display=swap');
+
+.logo-nghe-thuat {
+    font-family: 'Dancing Script', cursive; 
+    display: inline-block;
+    transform: skewX(-10deg); 
+    filter: drop-shadow(2px 2px 0px rgba(67, 223, 208, 0.2));
+    letter-spacing: -1px;
+}
+
+.logo-nghe-thuat:first-letter {
+    font-size: 1.2em;
+    color: #36c5b8;
+}
+body { 
+    font-family: 'Lexend', sans-serif; 
+    background-color: #f8fafc; 
+    margin: 0;
+}
+
+.vivu-card {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+    border: 1px solid #f1f5f9;
+}
+
+.btn-vivu {
+    background-color: #43dfd0;
+    color: white;
+    transition: all 0.3s;
+    border-radius: 16px;
+}
+
+.btn-vivu:hover {
+    background-color: #36c5b8;
+    box-shadow: 0 8px 20px rgba(67, 223, 208, 0.3);
+}
+
+.logo-text {
+    background: linear-gradient(45deg, #43dfd0, #36c5b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+@keyframes slideUp { 
+    from { transform: translateY(20px); opacity: 0; } 
+    to { transform: translateY(0); opacity: 1; } 
+}
+.animate-slideUp { animation: slideUp 0.4s ease-out; }

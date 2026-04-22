@@ -1,0 +1,66 @@
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url("/images/anh1.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #login-form {
+            background: rgb(255, 255, 255);
+            padding: 40px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h2 { color: #238e2d; margin-bottom: 10px; font-size: 28px; }
+        p { color: #666; margin-bottom: 30px; }
+
+        .input-group { margin-bottom: 20px; text-align: left; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #333; }
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+        }
+        input:focus { border-color: #219330; box-shadow: 0 0 5px rgba(12, 121, 63, 0.5); }
+
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            background: #1d902b;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-login:hover { background: #00d315; }
+
+        .btn-social {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-text { margin-top: 20px; font-size: 14px; color: #666; }
+        .footer-text a { color: #176c2f; text-decoration: none; font-weight: bold; }

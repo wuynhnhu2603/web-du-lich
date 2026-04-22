@@ -22,13 +22,22 @@
         
         <ul class="nav-center" id="nav-list">
             <li><a href="/templates/home.html" class="nav-a">Home</a></li>
-            <li><a href="/templates/tours.html" class="nav-a">Tours</a></li>
+            <li><a href="/templates/tours.html" class="nav-a active">Tours</a></li>
             <li><a href="/templates/cart.html" class="nav-a">Cart</a></li>
             <li><a href="/templates/about.html" class="nav-a">About Us</a></li>
             <li><a href="#" class="nav-a">Login</a></li>
         </ul>
     </header>
     <script>
+
+const user = JSON.parse(localStorage.getItem("user"));
+
+if(!user) {
+    alert("Bạn cần đăng nhập!");
+    window.location.href = "login.html";
+}
+
+
         const menu = document.querySelector('#mobile-menu');
         const navList = document.querySelector('#nav-list');
 
@@ -155,7 +164,7 @@
             </div>
 
             <div class="footer_3">
-                <p>© Bản quyền thuộc về Nhóm 5</p>
+                <p>© Bản quyền thuộc về Nhóm 4</p>
                 <p>Có thắc mắc? Đừng liên hệ!</p>
             </div>
     

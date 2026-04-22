@@ -50,6 +50,14 @@
     box-shadow:0 5px 15px rgba(46, 91, 20, 0.4);
 }
 
+.nav-a.active {
+  background-color: #4b954b; 
+  color: #ffffff;
+  border-radius: 25px;      
+  padding: 8px 20px;     
+  box-shadow:0 5px 15px rgba(46, 91, 20, 0.4);  
+}
+
 .nav-center li {
     cursor: pointer;
 }

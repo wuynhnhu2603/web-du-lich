@@ -21,12 +21,32 @@
         </div>
         
         <ul class="nav-center" id="nav-list">
-            <li><a href="/templates/home.html" class="nav-a">Home</a></li>
+            <li><a href="/templates/home.html" class="nav-a active">Home</a></li>
             <li><a href="/templates/tours.html" class="nav-a">Tours</a></li>
             <li><a href="/templates/cart.html" class="nav-a">Cart</a></li>
             <li><a href="/templates/about.html" class="nav-a">About Us</a></li>
-            <li><a href="#" class="nav-a">Login</a></li>
+            <li id="login-item"><a href="/templates/login.html" class="nav-a">Login</a></li>
+            <li id="logout-item"><a class="nav-a" onclick="logout()">Logout</a></li>
         </ul>
+<script>
+function logout() {
+    localStorage.removeItem("user");
+    window.location.href = "home.html";
+}
+
+const user = JSON.parse(localStorage.getItem("user"));
+
+const loginItem = document.getElementById("login-item");
+const logoutItem = document.getElementById("logout-item");
+
+if (user) {
+    // đã đăng nhập
+    loginItem.style.display = "none";
+} else {
+    // chưa đăng nhập
+    logoutItem.style.display = "none";
+}
+</script>
     </header>
     <script>
         const menu = document.querySelector('#mobile-menu');
@@ -175,7 +195,7 @@
             </div>
 
             <div class="footer_3">
-                <p>© Bản quyền thuộc về Nhóm 5</p>
+                <p>© Bản quyền thuộc về Nhóm 4</p>
                 <p>Có thắc mắc? Đừng liên hệ!</p>
             </div>
     

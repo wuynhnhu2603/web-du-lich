@@ -6,7 +6,7 @@
     "rating": 4.5,
     "category": "núi",
     "location": "Lâm Đồng",
-    "image": "images/dalat.jpg",
+    "image": "/images/dalat.jpg",
     "description": "Đà Lạt là điểm đến lý tưởng cho những ai yêu thích không khí se lạnh và sự lãng mạn. Hành trình 3 ngày 2 đêm sẽ đưa bạn ghé thăm Thung lũng Tình Yêu, check-in tại các quán cafe view thung lũng tuyệt đẹp, và thưởng thức ẩm thực đường phố tại Chợ Đêm như bánh tráng nướng, sữa đậu nành nóng. Khám phá nét kiến trúc Pháp cổ kính và tận hưởng sự bình yên giữa rừng thông bạt ngàn.",
     "duration": "3 ngày 2 đêm"
   },
@@ -17,7 +17,7 @@
     "rating": 4.8,
     "category": "biển",
     "location": "Đà Nẵng",
-    "image": "images/danang.jpg",
+    "image": "/images/danang.jpg",
     "description": "Trải nghiệm sự kết hợp giữa hiện đại và cổ điển. Du khách sẽ được đắm mình trong làn nước trong xanh của biển Mỹ Khê, chinh phục Cầu Vàng trên đỉnh Bà Nà Hills với mây mờ che phủ. Buổi tối là thời gian dành cho Phố cổ Hội An rực rỡ sắc đèn lồng, nơi bạn có thể đi thuyền thả hoa đăng trên sông Hoài và thưởng thức đặc sản Cao Lầu, cơm gà nức tiếng.",
     "duration": "4 ngày 3 đêm"
   },
@@ -28,7 +28,7 @@
     "rating": 4.9,
     "category": "biển",
     "location": "Kiên Giang",
-    "image": "images/phuquoc.jpg",
+    "image": "/images/phuquoc.jpg",
     "description": "Phú Quốc chào đón bạn với những bãi cát trắng mịn như kem và nước biển xanh ngọc bích. Tour nghỉ dưỡng bao gồm các hoạt động lặn ngắm san hô tại hòn Móng Tay, hòn Gầm Ghì, tham quan VinWonders và Safari quy mô lớn. Đừng quên ghé thăm các nhà xưởng nước mắm truyền thống và thưởng thức bữa tiệc hải sản tươi sống tại chợ đêm Dinh Cậu dưới ánh hoàng hôn tuyệt đẹp.",
     "duration": "4 ngày 3 đêm"
   },
@@ -39,7 +39,7 @@
     "rating": 4.7,
     "category": "núi",
     "location": "Lào Cai",
-    "image": "images/sapa.jpg",
+    "image": "/images/sapa.jpg",
     "description": "Hành trình khám phá thị trấn mờ sương Sapa và chinh phục đỉnh Fansipan bằng cáp treo hiện đại. Bạn sẽ được chiêm ngưỡng những thửa ruộng bậc thang hùng vĩ tại bản Cát Cát, tìm hiểu văn hóa độc đáo của người dân tộc Mông, Dao. Tiết trời se lạnh rất phù hợp để thưởng thức các món nướng đặc sản núi rừng và nhâm nhi rượu ngô bên bếp lửa hồng.",
     "duration": "3 ngày 2 đêm"
   },
@@ -50,7 +50,7 @@
     "rating": 4.8,
     "category": "biển",
     "location": "Quảng Ninh",
-    "image": "images/halong.jpg",
+    "image": "/images/halong.jpg",
     "description": "Trải nghiệm ngủ đêm trên du thuyền sang trọng giữa lòng Vịnh Hạ Long. Bạn sẽ được luồn lách qua hàng ngàn hòn đảo đá vôi kỳ vĩ, khám phá Động Thiên Cung, hang Sửng Sốt và tham gia chèo thuyền Kayak tại làng chài. Buổi sáng thức dậy với bài tập dưỡng sinh trên boong tàu và ngắm nhìn bình minh rạng rỡ trên mặt biển phẳng lặng là một trải nghiệm không thể quên.",
     "duration": "2 ngày 1 đêm"
   },
@@ -61,7 +61,7 @@
     "rating": 4.6,
     "category": "núi",
     "location": "Ninh Bình",
-    "image": "images/ninhbinh.jpg",
+    "image": "/images/ninhbinh.jpg",
     "description": "Được mệnh danh là 'Hạ Long trên cạn', Ninh Bình mang vẻ đẹp non nước hữu tình. Ngồi thuyền xuôi dòng Tràng An, len lỏi qua các hang động kỳ ảo và chiêm bái chùa Bái Đính - ngôi chùa lớn nhất Việt Nam. Du khách còn có cơ hội chinh phục Hang Múa để ngắm nhìn toàn cảnh Tam Cốc từ trên cao và thưởng thức đặc sản cơm cháy, thịt dê núi nổi tiếng.",
     "duration": "2 ngày 1 đêm"
   },
@@ -72,7 +72,7 @@
     "rating": 4.5,
     "category": "biển",
     "location": "Bình Định",
-    "image": "images/quynhon.jpg",
+    "image": "/images/quynhon.jpg",
     "description": "Quy Nhơn thu hút du khách bởi vẻ đẹp hoang sơ và yên bình. Eo Gió là nơi ngắm hoàng hôn đẹp nhất Việt Nam với những vách đá hùng vĩ. Bãi tắm Kỳ Co với dòng nước hai màu xanh ngắt sẽ làm say lòng bất cứ ai. Ngoài ra, bạn còn được tìm hiểu về văn hóa Chăm-pa qua các tháp Bánh Ít, tháp Đôi cổ kính và thưởng thức bánh xèo tôm nhảy thơm ngon.",
     "duration": "3 ngày 2 đêm"
   },
@@ -83,7 +83,7 @@
     "rating": 4.9,
     "category": "núi",
     "location": "Hà Giang",
-    "image": "images/hagiang.jpg",
+    "image": "/images/hagiang.jpg",
     "description": "Một chuyến đi dành cho những tâm hồn ưa mạo hiểm và khám phá. Vượt qua đèo Mã Pí Lèng - một trong tứ đại đỉnh đèo của miền Bắc, ngắm nhìn dòng sông Nho Quế xanh mướt từ trên cao. Khám phá Cao nguyên đá Đồng Văn, Dinh thự họ Vương và tham gia chợ phiên vùng cao rực rỡ sắc màu. Mùa hoa tam giác mạch từ tháng 10-12 là thời điểm Hà Giang đẹp nhất.",
     "duration": "4 ngày 3 đêm"
   },
@@ -94,7 +94,7 @@
     "rating": 4.4,
     "category": "đồng bằng",
     "location": "Cần Thơ",
-    "image": "images/cantho.jpg",
+    "image": "/images/cantho.jpg",
     "description": "Về với thủ phủ miền Tây để trải nghiệm văn hóa sông nước đặc trưng. Đi ghe thăm chợ nổi Cái Răng vào sáng sớm, ngắm nhìn cảnh buôn bán tấp nập trên sông. Ghé thăm các vườn trái cây trĩu quả, thưởng thức bánh xèo, lẩu mắm và nghe đờn ca tài tử. Sự hiếu khách và chân thành của người dân nơi đây chắc chắn sẽ để lại ấn tượng sâu đậm trong lòng du khách.",
     "duration": "2 ngày 1 đêm"
   },
@@ -105,7 +105,7 @@
     "rating": 4.3,
     "category": "biển",
     "location": "Bình Thuận",
-    "image": "images/muine.jpg",
+    "image": "/images/muine.jpg",
     "description": "Mũi Né nổi tiếng với những đồi cát bay rộng mênh mông như sa mạc thu nhỏ. Bạn có thể trải nghiệm trượt cát, lái xe địa hình trên đồi cát trắng và ngắm bình minh tuyệt đẹp. Tour còn đưa bạn đến Suối Tiên với những vách đá vôi kỳ lạ và làng chài Mũi Né nhộn nhịp. Đây là nơi lý tưởng cho các hoạt động thể thao biển như lướt ván diều, lướt sóng.",
     "duration": "3 ngày 2 đêm"
   },
@@ -116,7 +116,7 @@
     "rating": 4.6,
     "category": "văn hóa",
     "location": "Thừa Thiên Huế",
-    "image": "images/hue.jpg",
+    "image": "/images/hue.jpg",
     "description": "Hành trình trở về quá khứ tại vùng đất di sản. Bạn sẽ được tham quan Đại Nội Huế - nơi sinh sống của 13 vị vua triều Nguyễn, chiêm ngưỡng kiến trúc cung đình lộng lẫy và ghé thăm các lăng tẩm như Lăng Khải Định, Lăng Tự Đức với phong cách nghệ thuật độc đáo. Đừng bỏ lỡ trải nghiệm nghe ca Huế trên sông Hương vào buổi đêm và thưởng thức ẩm thực cung đình cầu kỳ cùng các loại bánh đặc sản như bánh bèo, nậm, lọc.",
     "duration": "3 ngày 2 đêm"
   },
@@ -127,7 +127,7 @@
     "rating": 4.7,
     "category": "biển",
     "location": "Khánh Hòa",
-    "image": "images/nhatrang.jpg",
+    "image": "/images/nhatrang.jpg",
     "description": "Nha Trang đón chào du khách bằng những bãi biển trải dài và hệ sinh thái biển phong phú. Bạn sẽ được tham gia tour 4 đảo, lặn ngắm san hô tại Hòn Mun, hoặc thử sức với các trò chơi cảm giác mạnh tại VinWonders. Sau một ngày dài, hãy thư giãn với dịch vụ tắm bùn khoáng nóng phục hồi sức khỏe. Buổi tối là thời điểm lý tưởng để thưởng thức nem nướng Đặng Văn Quyên và các loại hải sản tươi rói dọc cung đường Trần Phú.",
     "duration": "3 ngày 2 đêm"
   },
@@ -138,7 +138,7 @@
     "rating": 4.8,
     "category": "núi",
     "location": "Cao Bằng",
-    "image": "images/caobang.jpg",
+    "image": "/images/caobang.jpg",
     "description": "Khám phá Thác Bản Giốc - một trong những thác nước biên giới lớn nhất thế giới với những tầng thác đổ xuống như dải lụa trắng giữa rừng xanh. Hành trình còn đưa bạn đến với động Ngườm Ngao kỳ ảo, suối Lê-nin trong vắt và hang Pác Bó lịch sử. Đây là chuyến đi dành cho những người yêu thiên nhiên hoang sơ, muốn hít hà không khí trong lành của vùng núi cao phía Bắc và tìm hiểu cuộc sống bình dị của người dân tộc Tày, Nùng.",
     "duration": "3 ngày 2 đêm"
   },
@@ -149,7 +149,7 @@
     "rating": 4.5,
     "category": "núi",
     "location": "Đắk Lắk",
-    "image": "images/daklak.jpg",
+    "image": "/images/buonmathuot.jpg",
     "description": "Đến với Tây Nguyên đầy nắng và gió, bạn sẽ được check-in tại Bảo tàng Thế giới Cà phê với kiến trúc nhà rông cách điệu cực kỳ ấn tượng. Trải nghiệm cưỡi voi (du lịch thân thiện) tại Bản Đôn, ngắm nhìn thác Dray Nur hùng vĩ và chèo thuyền độc mộc trên hồ Lắk thơ mộng. Đặc biệt, bạn sẽ được thưởng thức hương vị cà phê nguyên chất đúng điệu và hòa mình vào nhịp cồng chiêng bên ánh lửa trại cùng dân bản địa.",
     "duration": "3 ngày 2 đêm"
   },
@@ -160,7 +160,7 @@
     "rating": 4.9,
     "category": "biển",
     "location": "Bà Rịa - Vũng Tàu",
-    "image": "images/condao.jpg",
+    "image": "/images/condao.jpg",
     "description": "Côn Đảo không chỉ là một điểm đến lịch sử tâm linh với hệ thống nhà tù khét tiếng thời chiến, mà còn là một thiên đường nghỉ dưỡng hoang sơ bậc nhất. Bạn có thể ghé thăm viếng mộ chị Võ Thị Sáu vào ban đêm, sau đó tận hưởng làn nước xanh ngắt tại Bãi Đầm Trầu hay hòn Bảy Cạnh - nơi bảo tồn rùa biển lớn nhất Việt Nam. Với lượng khách không quá đông đúc, đây là nơi tuyệt vời để đi trốn khỏi sự ồn ào của phố thị.",
     "duration": "3 ngày 2 đêm"
   }

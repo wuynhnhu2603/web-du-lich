@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/login.css">
+    <title>Đăng nhập</title>
+</head>
+<body>
+
+<div id="login-form">
+    <h2>ViVu Việt</h2>
+
+    <form id="login-form">
+        <div class="input-group">
+            <label>Tên Đăng Nhập</label>
+            <input type="text" name="username" placeholder="Nhập email của bạn..." required>
+        </div>
+        <div class="input-group">
+            <label>Mật khẩu</label>
+            <input type="password" name="password" placeholder="********" required>
+        </div>
+
+    <p style="color: red; text-align: center;"></p>
+        <button type="submit" class="btn-login">ĐĂNG NHẬP</button>
+    </form>
+
+</div>
+
+    <script>
+const form = document.getElementById("login-form");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const username = document.querySelector("input[name='username']").value;
+    const password = document.querySelector("input[name='password']").value;
+
+    const fakeUser = {
+        username: "admin",
+        password: "123456"
+    };
+
+    if(username === fakeUser.username && password === fakeUser.password) {
+
+        localStorage.setItem("user", JSON.stringify({ username }));
+
+        alert("Đăng nhập thành công!");
+
+        window.location.href = "home.html";
+    } else {
+        document.querySelector("p").innerText = "Sai tài khoản hoặc mật khẩu!";
+    }
+});
+
+</script>
+
+</body>
+</html>
