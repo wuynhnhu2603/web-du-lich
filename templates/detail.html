@@ -1,10 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Chi tiết Tour</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/detail.css">
 </head>
+
 <body>
 
+    <div class="container">
+        <img id="image">
+        <div class="content">
+            <h1 id="name"></h1>
+            <div class="price" id="price"></div>
+            <div class="rating" id="ratingText"></div>
+            <div class="desc" id="description"></div>
+
+            <div class="btn-group">
+                <button class="back-btn" onclick="goBack()">← Quay lại</button>
+                <button onclick="addToCart()">Thêm vào giỏ</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentTour = null;
+
+        function getIdFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('id');
+        }
+
+        function formatPrice(p) {
+            return p.toLocaleString('vi-VN') + ' ₫';
+        }
+
+        function goBack() {
+            window.location.href = "tours.html";
+        }
+
+        function addToCart() {
+    if (!currentTour) return;
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const index = cart.findIndex(t => t.id == currentTour.id);
+
+    if (index === -1) {
+        // Nếu chưa có: Thêm mới và GÁN THÊM quantity là 1
+        const tourToAdd = { 
+            ...currentTour, 
+            quantity: 1 
+        };
+        cart.push(tourToAdd);
+        alert("Đã thêm vào giỏ hàng!");
+    } else {
+        // Nếu đã có rồi: Tăng số lượng lên 1
+        cart[index].quantity = (cart[index].quantity || 0) + 1;
+        alert("Đã tăng số lượng trong giỏ hàng!");
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+        fetch('../database.json')
+            .then(res => res.json())
+            .then(data => {
+                const id = getIdFromUrl();
+                currentTour = data.find(t => t.id == id);
+
+                if (!currentTour) return;
+
+                document.getElementById('image').src = currentTour.image;
+                document.getElementById('name').innerText = currentTour.name;
+                document.getElementById('price').innerText = formatPrice(currentTour.price);
+                document.getElementById('description').innerText = currentTour.description;
+                document.getElementById('ratingText').innerText =
+                    "Đánh giá: " + currentTour.rating + "/5";
+            });
+    </script>
+
 </body>
+
 </html>

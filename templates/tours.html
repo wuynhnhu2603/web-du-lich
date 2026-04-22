@@ -25,10 +25,15 @@
             <li><a href="/templates/tours.html" class="nav-a active">Tours</a></li>
             <li><a href="/templates/cart.html" class="nav-a">Cart</a></li>
             <li><a href="/templates/about.html" class="nav-a">About Us</a></li>
-            <li><a href="#" class="nav-a">Login</a></li>
+            <li id="logout-item"><a class="nav-a" onclick="logout()">Logout</a></li>
         </ul>
     </header>
     <script>
+        function logout() {
+    localStorage.removeItem("user");
+    window.location.href = "home.html";
+}
+
 
 const user = JSON.parse(localStorage.getItem("user"));
 
@@ -47,7 +52,7 @@ if(!user) {
         });
 
     </script>
- <main class="container" style="background-color: rgb(31, 60, 38);">
+ <main class="container" style="background-color: rgb(9, 109, 76);">
  <div class="tour-all">
             <h1>DANH SÁCH TOURS DU LỊCH 🌍</h1>
 
