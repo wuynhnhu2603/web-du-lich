@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 40px;
+    margin: 0;
+    flex-wrap: wrap;
+    font-family:Arial, Helvetica, sans-serif;
+    z-index: 10000;
+    background-color: white;
+}
+
+.nav-left {
+    display: flex;
+    gap: 5px;
+    margin-right: auto;
+}
+
+.logo {
+    width: 60px;
+
+}
+.nav-center {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    font-size: 20px;
+    align-items: center;
+}
+
+.nav-center.show {
+        display: flex;
+    }
+
+.nav-a {
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.nav-a:visited {
+    color: inherit;
+}
+
+.nav-a:hover {
+    transform: translateY(-3px);
+    box-shadow:0 5px 15px rgba(46, 91, 20, 0.4);
+}
+
+.nav-a.active {
+  background-color: #4b954b; 
+  color: #ffffff;
+  border-radius: 25px;      
+  padding: 8px 20px;     
+  box-shadow:0 5px 15px rgba(46, 91, 20, 0.4);  
+}
+
+
+.nav-center li {
+    cursor: pointer;
+}
+
+@media(max-width: 1000px) {
+    .nav-center {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: white; 
+        padding: 20px 0;
+        border-radius: 15px;
+        gap: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+    .nav-center.active {
+        display: flex;
+    }
+
+}
+
+/* Hamburger menu*/
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #000000;
+    transition: all 0.5s ease;
+}
+
+@media (max-width: 1000px) {
+    .menu-toggle {
+        display: flex;
+        order: 2;
+    }
+}
+
+.footer {
+    background-color: black;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 40px;
+    border-radius: 15px;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: auto;
+}
+
+
+.footer_1 {
+    display: flex;
+    border-bottom: 1px solid white;
+
+}
+
+.social-links {
+    display: flex;
+    margin-left: auto;
+    gap: 30px;
+}
+
+.social-items {
+    background-color: white;
+    color: black;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.contact {
+    padding: 15px 0;
+
+}
+.footer_3 {
+    border-top: 1px solid white;
+    text-align: center;
+    font-size: 12px;
+}
+
+    </style>
+    <title>ViVu Việt</title>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <img class="logo" src="/images/logo.png">
+            <h2>ViVu Việt</h2>
+        </div>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
+        <ul class="nav-center" id="nav-list">
+            <li><a href="/templates/home.html" class="nav-a active">Home</a></li>
+            <li><a href="/templates/tours.html" class="nav-a">Tours</a></li>
+            <li><a href="/templates/cart.html" class="nav-a">Cart</a></li>
+            <li><a href="/templates/about.html" class="nav-a">About Us</a></li>
+            <li id="login-item"><a href="/templates/login.html" class="nav-a">Login</a></li>
+            <li id="logout-item"><a class="nav-a" onclick="logout()">Logout</a></li>
+        </ul>
+<script>
+function logout() {
+    localStorage.removeItem("user");
+    window.location.href = "home.html";
+}
+
+const user = JSON.parse(localStorage.getItem("user"));
+
+const loginItem = document.getElementById("login-item");
+const logoutItem = document.getElementById("logout-item");
+
+if (user) {
+    loginItem.style.display = "none";
+} else {
+    logoutItem.style.display = "none";
+}
+</script>
+    </header>
+    <script>
+        const menu = document.querySelector('#mobile-menu');
+        const navList = document.querySelector('#nav-list');
+
+        menu.addEventListener('click', function() {
+            navList.classList.toggle('active');
+            menu.classList.toggle('is-active');
+        });
+
+    </script>
+
+<main>
+    <!-- body-->
+</main>
+
+        <footer>
+        <div class="footer">
+            <div class="footer_1">
+                <img class="logo" src="/images/logo.png">
+                <h3>ViVu Việt</h3> 
+                <div class="social-links">
+                    <a href="#" class="social-items"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-items"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-items"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="social-items"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+
+            <div class="contact">
+                <h3>CONTACT</h3>
+                <p>Địa chỉ: P613, tòa A2, Đại học Kinh tế Quốc dân.</p>
+                <p>Hotline: 0123456789</p>
+                <p>Email: abcd1234@gmail.com</p>
+            </div>
+
+            <div class="footer_3">
+                <p>© Bản quyền thuộc về Nhóm 4</p>
+                <p>Có thắc mắc? Đừng liên hệ!</p>
+            </div>
+    
+
+        </div>
+    </footer>
+
+</body>
+</html>
