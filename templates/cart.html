@@ -10,7 +10,7 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../static/cart.css">
+    <link rel="stylesheet" href="mm.css">
 </head>
 <body>
     <div id="root"></div>
@@ -22,12 +22,12 @@
             if (!isOpen) return null;
             return (
                 <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[9999] p-4">
-                    <div className="bg-white rounded-[24px] p-8 max-w-sm w-full text-center animate-slideUp shadow-2xl">
+                    <div className="bg-white rounded-[24px] p-8 max-w-sm w-full text-center shadow-2xl">
                         <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4 text-red-500 text-2xl">
                             <i className="fa-solid fa-trash-can"></i>
                         </div>
                         <h3 className="text-xl font-bold mb-2">Xóa tour này?</h3>
-                        <p className="text-gray-500 mb-6 text-sm text-center">Bạn có chắc muốn bỏ <br/><span className="font-bold text-slate-700">{tourName}</span>?</p>
+                        <p className="text-gray-500 mb-6 text-sm">Bạn có chắc muốn bỏ <br/><span className="font-bold text-slate-700">{tourName}</span>?</p>
                         <div className="flex gap-3">
                             <button onClick={onClose} className="flex-1 py-3 rounded-xl bg-gray-100 font-bold text-gray-600">Hủy</button>
                             <button onClick={onConfirm} className="flex-1 py-3 rounded-xl bg-red-500 font-bold text-white shadow-lg">Xóa ngay</button>
@@ -44,35 +44,15 @@
             useEffect(() => {
                 const data = JSON.parse(localStorage.getItem('cart')) || [];
                 if(data.length === 0) {
-                    setCart([
-    {
-        id: 1,
-        name: "Đà Lạt 3N2Đ - Thành phố Ngàn Hoa",
-        price: 2200000,
-        image: "../images/dalat.jpg",
-        location: "Lâm Đồng",
-        duration: "3 ngày 2 đêm",
-        quantity: 1
-    },
-    {
-        id: 2,
-        name: "Khám phá Vịnh Hạ Long",
-        price: 3500000,
-        image: "../images/halong.jpg",
-        location: "Quảng Ninh",
-        duration: "2 ngày 1 đêm",
-        quantity: 1
-    },
-    {
-        id: 3,
-        name: "Tour Đảo Ngọc Phú Quốc",
-        price: 4800000,
-        image: "../images/phuquoc.jpg",
-        location: "Kiên Giang",
-        duration: "4 ngày 3 đêm",
-        quantity: 1
-    }
-]);
+                    setCart([{
+                        id: 1,
+                        name: "Đà Lạt 3N2Đ - Thành phố Ngàn Hoa",
+                        price: 2200000,
+                        image: "../images/dalat.jpg", 
+                        location: "Lâm Đồng",
+                        duration: "3 ngày 2 đêm",
+                        quantity: 3
+                    }]);
                 } else {
                     setCart(data);
                 }
@@ -96,94 +76,110 @@
             };
 
             return (
-                <div className="min-h-screen">
-                    <header className="bg-white border-b sticky top-0 z-50">
-                        <div className="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
-<div className="flex items-center gap-4 cursor-pointer">
-
-    <div className="w-14 h-14 bg-[#43dfd0] rounded-2xl flex items-center justify-center text-white shadow-lg transform -rotate-12 hover:rotate-0 transition-transform duration-300">
-        <i className="fa-solid fa-paper-plane text-2xl"></i>
-    </div>
-    
-    <div className="flex flex-col leading-none">
-        <span className="text-5xl logo-nghe-thuat tracking-tighter">
-            <span className="text-[#43dfd0]">ViVu</span> Việt
-        </span>
-        <span className="text-[12px] tracking-[6px] text-gray-300 font-black uppercase ml-1 mt-1">Discovery</span>
-    </div>
-</div>
-                            <nav className="hidden md:flex gap-8 text-sm font-semibold text-slate-600">
-                                <a href="home.html" className="hover:text-[#43dfd0]">Trang chủ</a>
-                                <a href="tours.html" className="hover:text-[#43dfd0]">Tour du lịch</a>
-                                <a href="#" className="text-[#43dfd0]">Giỏ hàng</a>
-                            </nav>
-                        </div>
+                <div className="min-h-screen bg-[#f8fafc] flex flex-col">
+                    {/* --- HEADER --- */}
+                    <header className="navbar-container">
+                        <nav className="navbar">
+                            <div className="nav-left">
+                                <img className="logo" src="https://github.com/wuynhnhu2603/web-du-lich/blob/Nhu/images/logo.png?raw=true" alt="Logo" />
+                                <h2 className="logo-text-group">ViVu Việt</h2>
+                            </div>
+                            <ul className="nav-center">
+                                <li><a href="home.html" className="nav-a">Home</a></li>
+                                <li><a href="tours.html" className="nav-a">Tours</a></li>
+                                <li><a href="#" className="nav-a active">Cart</a></li>
+                                <li><a href="about.html" className="nav-a">About Us</a></li>
+                                <li><a href="#" className="nav-a">Login</a></li>
+                            </ul>
+                        </nav>
                     </header>
 
-                    <main className="max-w-6xl mx-auto px-4 py-12">
-                        <div className="flex items-center gap-4 mb-10">
-                            <a href="home.html" className="text-slate-400 hover:text-[#43dfd0] transition">
-                                <i className="fa-solid fa-arrow-left text-xl"></i>
-                            </a>
-                            <h1 className="text-3xl font-bold text-slate-800">Thông tin đặt chỗ</h1>
+                    {/* --- BREADCRUMB --- */}
+                    <div className="breadcrumb-wrapper">
+                        <div className="breadcrumb-pill">
+                            <a href="home.html">Trang chủ</a>
+                            <i className="fa-solid fa-chevron-right"></i>
+                            <a href="tours.html">Tours</a>
+                            <i className="fa-solid fa-chevron-right"></i>
+                            <span className="current-page">Giỏ hàng của tôi</span>
                         </div>
-                        
+                    </div>
+
+                    {/* --- MAIN CONTENT --- */}
+                    <main className="flex-grow max-w-6xl mx-auto w-full px-4 py-8">
+                        <h1 className="text-3xl font-bold text-slate-800 mb-10 px-6">Thông tin đặt chỗ</h1>
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
                             <div className="lg:col-span-8 space-y-6">
                                 {cart.length === 0 ? (
-                                    <div className="vivu-card p-20 text-center text-gray-400 font-medium">Giỏ hàng đang trống</div>
+                                    <div className="bg-white p-20 text-center text-gray-400 font-medium rounded-3xl">Giỏ hàng đang trống</div>
                                 ) : cart.map(item => (
-                                    <div key={item.id} className="vivu-card p-6 flex flex-col md:flex-row gap-6 items-center">
-                                        <img src={item.image} className="w-full md:w-44 h-32 object-cover rounded-2xl shadow-sm" />
+                                    <div key={item.id} className="bg-white p-6 flex flex-col md:flex-row gap-6 items-center rounded-[30px] shadow-sm border border-gray-50">
+                                        <img src={item.image} className="w-full md:w-44 h-32 object-cover rounded-2xl" />
                                         <div className="flex-1 w-full">
                                             <h3 className="text-lg font-bold text-slate-800 mb-1">{item.name}</h3>
                                             <div className="flex gap-4 text-[11px] text-gray-400 mb-5">
-                                                <span><i className="fa-regular fa-clock mr-1 text-[#43dfd0]"></i>{item.duration}</span>
-                                                <span><i className="fa-solid fa-location-dot mr-1 text-[#43dfd0]"></i>{item.location}</span>
+                                                <span><i className="fa-regular fa-clock mr-1 text-[#4b954b]"></i>{item.duration}</span>
+                                                <span><i className="fa-solid fa-location-dot mr-1 text-[#4b954b]"></i>{item.location}</span>
                                             </div>
                                             <div className="flex items-center justify-between">
                                                 <div className="flex items-center border rounded-full px-2 py-1 bg-gray-50 border-gray-100">
-                                                    <button onClick={() => updateQty(item.id, -1)} className="p-2 text-gray-400 hover:text-[#43dfd0] transition"><i className="fa-solid fa-minus text-[10px]"></i></button>
+                                                    <button onClick={() => updateQty(item.id, -1)} className="p-2 text-gray-400 hover:text-[#4b954b]"><i className="fa-solid fa-minus text-[10px]"></i></button>
                                                     <span className="w-8 text-center font-bold text-slate-700">{item.quantity}</span>
-                                                    <button onClick={() => updateQty(item.id, 1)} className="p-2 text-gray-400 hover:text-[#43dfd0] transition"><i className="fa-solid fa-plus text-[10px]"></i></button>
+                                                    <button onClick={() => updateQty(item.id, 1)} className="p-2 text-gray-400 hover:text-[#4b954b]"><i className="fa-solid fa-plus text-[10px]"></i></button>
                                                 </div>
-                                                <button onClick={() => setModal({open: true, id: item.id, name: item.name})} className="text-gray-300 hover:text-red-500 transition-colors">
+                                                <button onClick={() => setModal({open: true, id: item.id, name: item.name})} className="text-gray-300 hover:text-red-500">
                                                     <i className="fa-solid fa-trash-can"></i>
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="md:text-right w-full md:w-auto pt-4 md:pt-0 border-t md:border-t-0 border-gray-50">
-                                            <p className="text-2xl font-bold text-[#43dfd0]">{(item.price * item.quantity).toLocaleString()}đ</p>
+                                        <div className="md:text-right w-full md:w-auto">
+                                            <p className="text-2xl font-bold text-[#4b954b]">{(item.price * item.quantity).toLocaleString()}đ</p>
                                         </div>
                                     </div>
                                 ))}
                             </div>
 
                             <div className="lg:col-span-4">
-                                <div className="vivu-card p-8 sticky top-28 border border-gray-50">
+                                <div className="bg-white p-8 sticky top-28 rounded-[30px] shadow-sm border border-gray-50">
                                     <h2 className="text-lg font-bold mb-6 pb-4 border-b border-gray-100">Tóm tắt chuyến đi</h2>
-                                    <div className="flex justify-between mb-4 text-sm">
-                                        <span className="text-gray-500">Tạm tính ({cart.length} tour)</span>
-                                        <span className="font-bold text-slate-800">{totalPrice.toLocaleString()}đ</span>
-                                    </div>
-                                    <div className="flex justify-between mb-8 text-sm">
-                                        <span className="text-gray-500">Phí dịch vụ</span>
-                                        <span className="text-green-500 font-bold">Miễn phí</span>
-                                    </div>
                                     <div className="flex justify-between items-end border-t border-dashed border-gray-200 pt-6 mb-8">
                                         <span className="font-bold text-slate-800">Tổng cộng</span>
-                                        <div className="text-right">
-                                            <p className="text-3xl font-extrabold text-[#43dfd0]">{totalPrice.toLocaleString()}đ</p>
-                                            <p className="text-[10px] text-gray-400 uppercase tracking-wider">Đã bao gồm VAT</p>
-                                        </div>
+                                        <p className="text-3xl font-black text-[#4b954b]">{totalPrice.toLocaleString()}đ</p>
                                     </div>
-                                    <button className="w-full btn-vivu py-4 rounded-2xl font-bold text-lg shadow-lg">
+                                    <button className="w-full bg-[#4b954b] text-white py-4 rounded-2xl font-bold text-lg">
                                         Thanh toán ngay
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </main>
+
+                    {/* --- FOOTER NHÓM (Chuẩn React) --- */}
+                    <div className="px-8 pb-4">
+                        <footer className="footer">
+                            <div className="footer_1">
+                                <img className="logo" src="https://github.com/wuynhnhu2603/web-du-lich/blob/Nhu/images/logo.png?raw=true" alt="Logo" />
+                                <h3 className="ml-3 font-bold text-xl">ViVu Việt</h3> 
+                                <div className="social-links">
+                                    <a href="#" className="social-items"><i className="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" className="social-items"><i className="fa-brands fa-instagram"></i></a>
+                                    <a href="#" className="social-items"><i className="fa-brands fa-x-twitter"></i></a>
+                                    <a href="#" className="social-items"><i className="fa-brands fa-youtube"></i></a>
+                                </div>
+                            </div>
+                            <div className="contact">
+                                <h3 className="font-bold mb-2">CONTACT</h3>
+                                <p>Địa chỉ: P613, tòa A2, Đại học Kinh tế Quốc dân.</p>
+                                <p>Hotline: 0123456789</p>
+                                <p>Email: abcd1234@gmail.com</p>
+                            </div>
+                            <div className="footer_3">
+                                <p>© Bản quyền thuộc về Nhóm 4</p>
+                                <p>Có thắc mắc? Đừng liên hệ!</p>
+                            </div>
+                        </footer>
+                    </div>
+
                     <ConfirmModal isOpen={modal.open} onClose={() => setModal({open: false})} onConfirm={confirmDelete} tourName={modal.name} />
                 </div>
             );
