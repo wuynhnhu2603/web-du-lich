@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>ViVu Việt</title>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <img class="logo" src="/images/logo.png">
+            <h2>ViVu Việt</h2>
+        </div>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
+        <ul class="nav-center" id="nav-list">
+            <li><a href="/templates/home.html" class="nav-a active">Home</a></li>
+            <li><a href="/templates/tours.html" class="nav-a">Tours</a></li>
+            <li><a href="/templates/cart.html" class="nav-a">Cart</a></li>
+            <li><a href="/templates/about.html" class="nav-a">About Us</a></li>
+            <li id="login-item"><a href="/templates/login.html" class="nav-a">Login</a></li>
+            <li id="logout-item"><a class="nav-a" onclick="logout()">Logout</a></li>
+        </ul>
+<script>
+function logout() {
+    localStorage.removeItem("user");
+    window.location.href = "home.html";
+}
+
+const user = JSON.parse(localStorage.getItem("user"));
+
+const loginItem = document.getElementById("login-item");
+const logoutItem = document.getElementById("logout-item");
+
+if (user) {
+    loginItem.style.display = "none";
+} else {
+    logoutItem.style.display = "none";
+}
+</script>
+    </header>
+    <script>
+        const menu = document.querySelector('#mobile-menu');
+        const navList = document.querySelector('#nav-list');
+
+        menu.addEventListener('click', function() {
+            navList.classList.toggle('active');
+            menu.classList.toggle('is-active');
+        });
+
+    </script>
+ <main class="container">
+    <section style="background-image: linear-gradient(rgba(0,0,0,0.3)), url('/images/anh1.jpg');" class="s1">
+        <div class="home-content-1">
+            <h1>Khám phá vẻ đẹp Việt Nam ẩn giấu</h1>
+            <h2>Cùng Vivu Việt viết nên hành trình rực rỡ từ những bản làng vùng cao đến những bờ cát trắng mịn màng</h2>
+            <a href="/templates/login"><button>Khám phá ngay</button></a>
+        </div>
+    </section>
+
+    <section class="s2" style="background-image: url('/images/bg1.jpg');">
+        <h1>Hành trình dành cho bạn</h1>
+        <div class="top-diadiem">
+            <div class="top">
+                <img src="/images/top1.jpg">
+                <h3>Hà Giang</h3>
+                <h4>Cột cờ Lũng Cú</h4>
+            </div>
+
+            <div class="top">
+                <img src="/images/top2.jpg">
+                <h3>Hội An</h3>
+                <h4>Rừng dừa Bảy Mẫu</h4>
+            </div>
+
+            <div class="top">
+                <img src="/images/top3.jpg">
+                <h3>Phú Quốc</h3>
+                <h4>Bãi Sao</h4>
+            </div>
+
+            <div class="top">
+                <img src="/images/top4.jpg">
+                <h3>Ninh Bình</h3>
+                <h4>Chùa Tràng An</h4>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-image: url('/images/bg2.jpg')" class="s3">
+        <div class="title">
+            <h1>Blog Vivu</h1>
+        </div>
+        <div class="bai-bao">
+        <div class="bai-bao-chinh">
+            <img src="/images/s3.jpg">
+            <div class="info-main">
+                <a href="https://laodong.vn/du-lich/kham-pha/homestay-vung-cao-niu-chan-du-khach-tu-nhung-dieu-binh-di-1688118.html">
+                    <strong style="font-size: 28px;">Homestay vùng cao níu chân du khách từ những điều bình dị</strong>
+                </a>
+                <p class="time">20/04/2026 13:30 (GMT+7)</p>
+                <p class="author">Tác giả: Duy Dũng</p>
+            </div>
+        </div>
+
+        <div class="news">
+
+            <div class="news-s">
+                <a href="https://thanhnien.vn/viet-nam-vao-top-7-diem-den-trai-nghiem-tha-rua-bien-tren-the-gioi-185260421085322649.htm"><img src="/images/s3-1.jpg"></a>
+                <div class="info">
+                    <a href="https://thanhnien.vn/viet-nam-vao-top-7-diem-den-trai-nghiem-tha-rua-bien-tren-the-gioi-185260421085322649.htm"><strong style="font-size: 21px;">Việt Nam vào top 7 điểm đến trải nghiệm thả rùa biển trên thế giới</strong></a>
+                    <p>Tác giả: Lê Nam</p>
+                    <p class="time-s">21/04/2026 08:58 GMT+7</p>
+                </div>
+            </div>
+
+
+            <div class="news-s">
+                <a href="https://thanhnien.vn/36-gio-kham-pha-hoi-an-theo-cach-cua-bao-my-new-york-times-185260420113225439.htm"><img src="/images/s3-2.jpg"></a>
+                <div class="info">
+                    <a href="https://thanhnien.vn/36-gio-kham-pha-hoi-an-theo-cach-cua-bao-my-new-york-times-185260420113225439.htm"><strong style="font-size: 21px;">36 giờ khám phá Hội An theo cách của báo Mỹ New York Times</strong></a>
+                    <p>Tác giả: Vi Nguyễn</p>
+                    <p class="time-s">21/04/2026 08:33 GMT+7</p>
+                </div>
+            </div>
+
+            <div class="news-s">
+                <a href="https://thanhnien.vn/phat-hien-hang-dai-hon-500-m-trong-rung-phong-nha-ke-bang-185260421072834679.htm"><img src="/images/s3-3.jpg"></a>
+                <div class="info">
+                    <a href="https://thanhnien.vn/phat-hien-hang-dai-hon-500-m-trong-rung-phong-nha-ke-bang-185260421072834679.htm"><strong style="font-size: 21px;">Phát hiện hang dài hơn 500 m trong rừng Phong Nha - Kẻ Bàng</strong></a>
+                    <p>Tác giả: Thanh Lộc</p>
+                    <p class="time-s">21/04/2026 08:34 GMT+7</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section style="background-image: url('/images/bg3.jpg');" class="s4">
+        <h1>Chia sẻ nhỏ từ cộng đồng Vivu</h1>
+        <div class="danh-gia">
+        <div class="comment">
+            <div class="nhan-xet">
+                <p>"Chuyến đi bộ xuyên rừng Cúc Phương là kỷ niệm đáng nhớ nhất của tôi. Cảm ơn Vivu Việt đã gợi ý những lịch trình thật sự khác biệt và gần gũi với thiên nhiên."</p>
+                <p style="text-align: right;">————  Minh Anh, TP. Hồ Chí Minh</p>
+            </div>
+            <img src="/images/s4-1.jpg">
+        </div>
+        <div class="comment">
+            <img src="/images/s4-2.jpg">
+            <div class="nhan-xet">
+                <p>"Hệ thống đặt vé của Vivu Việt rất trực quan, mình chỉ mất chưa đầy 2 phút là đã sở hữu ngay cặp vé tham quan Bà Nà Hills với giá ưu đãi hơn mua trực tiếp. Rất tiện lợi cho những người bận rộn!"</p>
+                <p style="text-align: right;">————  Quốc Khánh, Đà Nẵng</p>
+            </div>
+        </div>
+        <div class="comment">
+            <div class="nhan-xet">
+                <p>"Không chỉ là một trang đặt vé, Vivu Việt mang lại cảm giác an tâm như có một người bạn đồng hành bản địa. Giao diện mượt mà và quy trình minh bạch khiến mình hoàn toàn tin tưởng để gửi gắm những hành trình khám phá của bản thân."</p>
+                <p style="text-align: right;">————  Linh Chi, Hà Nội</p>
+            </div>
+            <img src="/images/s4-3.jpg">
+        </div>
+</div>
+    </section> 
+</main>
+
+        <footer>
+        <div class="footer">
+            <div class="footer_1">
+                <img class="logo" src="/images/logo.png">
+                <h3>ViVu Việt</h3> 
+                <div class="social-links">
+                    <a href="#" class="social-items"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-items"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-items"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="social-items"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+
+            <div class="contact">
+                <h3>CONTACT</h3>
+                <p>Địa chỉ: P613, tòa A2, Đại học Kinh tế Quốc dân.</p>
+                <p>Hotline: 0123456789</p>
+                <p>Email: abcd1234@gmail.com</p>
+            </div>
+
+            <div class="footer_3">
+                <p>© Bản quyền thuộc về Nhóm 4</p>
+                <p>Có thắc mắc? Đừng liên hệ!</p>
+            </div>
+    
+
+        </div>
+    </footer>
+
+</body>
+</html>
